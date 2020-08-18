@@ -9,6 +9,10 @@ import FunctionClick from "./components/functionClick";
 import ClassClick from "./components/classFunEvent";
 import Events from "./components/events";
 import Parent from "./components/parent";
+import UserWelcome from "./components/userWelcome";
+import UserWelcome2 from "./components/userWelcome2";
+import UserWelcome3 from "./components/userWelcome3";
+import UserWelcome4 from './components/userWelcome4';
 
 function App() {
   return (
@@ -25,6 +29,10 @@ function App() {
       {/*<ClassClick />*/}
       {/*<Events />*/}
       {/*<Parent />*/}
+      {/*<UserWelcome />*/}
+      {/*<UserWelcome2 />*/}
+      {/*<UserWelcome3 />*/}
+      <UserWelcome4 />
     </div>
   );
 }
