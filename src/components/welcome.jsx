@@ -2,7 +2,12 @@ import React, { Component } from "react";
 class Welcome extends Component {
   state = {};
   render() {
-    return <h1>This is class component</h1>;
+    const { name, heroName } = this.props;
+    return (
+      <p>
+        {name} is known as {heroName}
+      </p>
+    );
   }
 }
 
