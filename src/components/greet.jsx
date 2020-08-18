@@ -1,7 +1,6 @@
 import React from "react";
 
-const Greet = (props) => {
-  const { name, heroName } = props;
+const Greet = ({ name, heroName }) => {
   return (
     <p>
       {heroName}'s orginal name is {name}
