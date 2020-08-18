@@ -8,6 +8,7 @@ import Counter from "./components/counter";
 import FunctionClick from "./components/functionClick";
 import ClassClick from "./components/classFunEvent";
 import Events from "./components/events";
+import Parent from "./components/parent";
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
       {/*<Counter />*/}
       {/*<FunctionClick />*/}
       {/*<ClassClick />*/}
-      <Events />
+      {/*<Events />*/}
+      {/*<Parent />*/}
     </div>
   );
 }
