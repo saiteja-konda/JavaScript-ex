@@ -13,6 +13,7 @@ import UserWelcome from "./components/userWelcome";
 import UserWelcome2 from "./components/userWelcome2";
 import UserWelcome3 from "./components/userWelcome3";
 import UserWelcome4 from "./components/userWelcome4";
+import NameList from "./components/lists";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
       {/*<UserWelcome2 />*/}
       {/*<UserWelcome3 />*/}
       {/*<UserWelcome4 />*/}
+      <NameList />
     </div>
   );
 }
