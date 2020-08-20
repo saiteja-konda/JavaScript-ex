@@ -1,0 +1,67 @@
+body {
+  margin: 0px, auto;
+  background-color: azure;
+  font-family: "nunito";
+}
+.head {
+  margin-top: 40px;
+  text-align: center;
+}
+#container .button1 {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #4caf50;
+}
+#container .button2 {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #f44336;
+}
+#container input[type="text"] {
+  width: 25%;
+  height: 48px;
+  padding: 12px 10px;
+  margin: 9px 0;
+  box-sizing: border-box;
+}
+
+#container ul li input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, .3)
+}
+
+ul {
+  list-style: none;
+  font-weight: bolder;
+  font-size: larger;
+}
+#container ul li label {
+  margin: 0 auto;
+  vertical-align: middle;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#container .mycheck {
+  opacity: 1;
+  border-radius: 10px;
+}
+
+visual {
+  opacity: 1 !important;
+  border-radius: 10px;
+}
