@@ -1,8 +1,8 @@
 import React from "react";
-import Person from './Person';
+import Person from "./Person";
 function NameList() {
   const names = ["Bruce", "Clark", "Diana"];
-  const nameList = names.map((name) => <h2>{name}</h2>);
+//   const nameList = names.map((name) => <h2>{name}</h2>);
   const persons = [
     {
       id: 1,
@@ -23,12 +23,10 @@ function NameList() {
       skill: "Php",
     },
   ];
-  const personList = persons.map((person) => <Person person ={person}/>
-  );
+  const personList = persons.map((person) => <Person key ={person.id} person={person} />);
 
   return (
     <div>
-      {nameList}
       {personList}
     </div>
   );
