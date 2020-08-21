@@ -4,6 +4,8 @@ import "./App.css";
 import PortalDemo from "./components/30 Portals/portalDemo";
 import Hero from "./components/31 Error Boundary/Hero";
 import ErrorBoundary from "./components/31 Error Boundary/errorBoundary";
+import ClickCounder from "./components/32 Higher Order Comp/clickCounter";
+import HoverCounter from "./components/32 Higher Order Comp/hoverCounter";
 // import Refs from "./components/27 Refs/refs";
 // import InputRef from "./components/27 Refs/input";
 // import Greet from "./components/greet";
@@ -50,7 +52,7 @@ function App() {
       {/*<FocutInput/>*/}
       {/*<ParentInput/>*/}
       {/*<PortalDemo />*/}
-      <ErrorBoundary>
+      {/*      <ErrorBoundary>
       <Hero heroName="BatMan" />
       </ErrorBoundary>
       <ErrorBoundary>
@@ -58,7 +60,9 @@ function App() {
       </ErrorBoundary>
       <ErrorBoundary>
       <Hero heroName="Jocker" />
-      </ErrorBoundary>
+      </ErrorBoundary>*/}
+      <ClickCounder />
+      <HoverCounter />
     </div>
   );
 }
