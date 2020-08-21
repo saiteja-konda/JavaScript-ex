@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./App.css";
+import Refs from "./components/Refs/refs";
 // import Greet from "./components/greet";
 // import Welcome from "./components/welcome";
 // import Message from "./components/message";
@@ -15,7 +16,7 @@ import "./App.css";
 // import UserWelcome4 from "./components/userWelcome4";
 // import NameList from "./components/lists";
 // import ControlledComponents from "./components/controlledComponents";
-import ParentComp from './components/26 pure components/parentComp';
+// import ParentComp from './components/26 pure components/parentComp';
 
 function App() {
   return (
@@ -38,7 +39,8 @@ function App() {
       {/*<UserWelcome4 />*/}
       {/*<NameList />*/}
       {/*<ControlledComponents />*/}
-      <ParentComp />
+      {/*  <ParentComp />*/}
+      <Refs/>
     </div>
   );
 }
