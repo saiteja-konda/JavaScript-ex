@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./App.css";
+import PortalDemo from "./components/30 Portals/portalDemo";
 // import Refs from "./components/27 Refs/refs";
 // import InputRef from "./components/27 Refs/input";
 // import Greet from "./components/greet";
@@ -18,7 +19,7 @@ import "./App.css";
 // import NameList from "./components/lists";
 // import ControlledComponents from "./components/controlledComponents";
 // import ParentComp from './components/26 pure components/parentComp';
-import ParentInput from "./components/29 forward Refs/Parent";
+// import ParentInput from "./components/29 forward Refs/Parent";
 
 function App() {
   return (
@@ -45,7 +46,8 @@ function App() {
       {/*<Refs/>*/}
       {/*<InputRef />*/}
       {/*<FocutInput/>*/}
-      <ParentInput/>
+      {/*<ParentInput/>*/}
+      <PortalDemo />
     </div>
   );
 }
