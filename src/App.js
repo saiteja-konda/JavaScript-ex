@@ -2,6 +2,8 @@ import React from "react";
 
 import "./App.css";
 import PortalDemo from "./components/30 Portals/portalDemo";
+import Hero from "./components/31 Error Boundary/Hero";
+import ErrorBoundary from "./components/31 Error Boundary/errorBoundary";
 // import Refs from "./components/27 Refs/refs";
 // import InputRef from "./components/27 Refs/input";
 // import Greet from "./components/greet";
@@ -47,7 +49,16 @@ function App() {
       {/*<InputRef />*/}
       {/*<FocutInput/>*/}
       {/*<ParentInput/>*/}
-      <PortalDemo />
+      {/*<PortalDemo />*/}
+      <ErrorBoundary>
+      <Hero heroName="BatMan" />
+      </ErrorBoundary>
+      <ErrorBoundary>
+      <Hero heroName="SuperMan" />
+      </ErrorBoundary>
+      <ErrorBoundary>
+      <Hero heroName="Jocker" />
+      </ErrorBoundary>
     </div>
   );
 }
