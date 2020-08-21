@@ -1,20 +1,21 @@
 import React from "react";
 
 import "./App.css";
-import Greet from "./components/greet";
-import Welcome from "./components/welcome";
-import Message from "./components/message";
-import Counter from "./components/counter";
-import FunctionClick from "./components/functionClick";
-import ClassClick from "./components/classFunEvent";
-import Events from "./components/events";
-import Parent from "./components/parent";
-import UserWelcome from "./components/userWelcome";
-import UserWelcome2 from "./components/userWelcome2";
-import UserWelcome3 from "./components/userWelcome3";
-import UserWelcome4 from "./components/userWelcome4";
-import NameList from "./components/lists";
-import ControlledComponents from "./components/controlledComponents";
+// import Greet from "./components/greet";
+// import Welcome from "./components/welcome";
+// import Message from "./components/message";
+// import Counter from "./components/counter";
+// import FunctionClick from "./components/functionClick";
+// import ClassClick from "./components/classFunEvent";
+// import Events from "./components/events";
+// import Parent from "./components/parent";
+// import UserWelcome from "./components/userWelcome";
+// import UserWelcome2 from "./components/userWelcome2";
+// import UserWelcome3 from "./components/userWelcome3";
+// import UserWelcome4 from "./components/userWelcome4";
+// import NameList from "./components/lists";
+// import ControlledComponents from "./components/controlledComponents";
+import ParentComp from './components/26 pure components/parentComp';
 
 function App() {
   return (
@@ -36,7 +37,8 @@ function App() {
       {/*<UserWelcome3 />*/}
       {/*<UserWelcome4 />*/}
       {/*<NameList />*/}
-      <ControlledComponents />
+      {/*<ControlledComponents />*/}
+      <ParentComp />
     </div>
   );
 }

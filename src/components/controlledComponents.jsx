@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export class ControlledComponents extends Component {
+class ControlledComponents extends Component {
   constructor(props) {
     super(props);
 
@@ -27,7 +27,7 @@ export class ControlledComponents extends Component {
   };
   handleSubmit = (event) => {
     alert(
-      ` ${`this.state.`username} ${this.state.biography} ${this.state.topic}`
+      ` ${this.state.username} ${this.state.biography} ${this.state.topic}`
     );
     event.preventDefault();
   };
