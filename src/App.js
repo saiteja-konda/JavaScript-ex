@@ -24,6 +24,7 @@ import HoverCounter from "./components/32 Higher Order Comp/hoverCounter";
 // import ControlledComponents from "./components/controlledComponents";
 // import ParentComp from './components/26 pure components/parentComp';
 // import ParentInput from "./components/29 forward Refs/Parent";
+import Hooks from './components/33 Hooks/hooks';
 
 function App() {
   return (
@@ -61,8 +62,9 @@ function App() {
       <ErrorBoundary>
       <Hero heroName="Jocker" />
       </ErrorBoundary>*/}
-      <ClickCounder name='IronMan' />
-      <HoverCounter />
+      {/*<ClickCounder name='IronMan' />*/}
+      {/*<HoverCounter />*/}
+      <Hooks />
     </div>
   );
 }
