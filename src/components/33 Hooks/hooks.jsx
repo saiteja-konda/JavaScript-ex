@@ -1,9 +1,20 @@
-import React, { Component, useState } from "react";
+import { render } from "@testing-library/react";
+import React, { Component, useState, useEffect } from "react";
 const Hooks = () => {
   //   const [Text, setText] = useState("");
-  const [fruit, setFruit] = useState("");
-  const [vegitable, setVegitable] = useState("");
-
+  const [fruit, setFruit] = useState("default");
+  const [vegitable, setVegitable] = useState("default");
+  
+  useEffect(() => {
+    if (({ vegitable } && { fruit } )!== "default") {
+      render(<div>My fav fruit is <b>{fruit}</b> and my fav vegitable is <b>{vegitable}</b></div>);
+    }
+    else {
+        render(
+            <div></div>
+        )
+    }
+  });
   return (
     <div>
       <lable>Fruit Name </lable>
@@ -14,7 +25,7 @@ const Hooks = () => {
       <br />
       <br />
       <br />
-      My fav fruit is <b>{fruit}</b> and my fav vegitable is <b>{vegitable}</b>
+      
     </div>
   );
 };
