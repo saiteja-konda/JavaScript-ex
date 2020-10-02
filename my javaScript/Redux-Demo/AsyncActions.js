@@ -7,52 +7,52 @@ const axios = require('axios');
 //State
 const initialState = {
   loading: false,
-  users: [],
+  posts: [],
   error: '',
 };
 
 //Actions types
-const FETCH_USERS_REQUEST = 'FETCH_USERS_REQUEST';
-const FETCH_USERS_SUCCESS = 'FETCH_USERS_SUCCESS';
-const FETCH_USERS_FAILURE = 'FETCH_USERS_FAILURE';
+const FETCH_POSTS_REQUEST = 'FETCH_POSTS_REQUEST';
+const FETCH_POSTS_SUCCESS = 'FETCH_POSTS_SUCCESS';
+const FETCH_POSTS_FAILURE = 'FETCH_POSTS_FAILURE';
 
-const fetchUserRequest = () => {
+const fetchPostRequest = () => {
   return {
-    type: FETCH_USERS_REQUEST,
+    type: FETCH_POSTS_REQUEST,
     info: 'Requesting Fetch Users',
   };
 };
 
-const fetchUserSuccess = users => {
+const fetchPostSuccess = users => {
   return {
-    type: FETCH_USERS_SUCCESS,
+    type: FETCH_POSTS_SUCCESS,
     info: 'Fetched Users Successfully',
     payload: users,
   };
 };
 
-const fetchUserFailure = error => {
+const fetchPostFailure = error => {
   return {
-    type: FETCH_USERS_FAILURE,
+    type: FETCH_POSTS_FAILURE,
     info: 'Fetched Users Failed',
     payload: error,
   };
 };
 
-const userReducer = (state = initialState, action) => {
+const postReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_USERS_REQUEST:
+    case FETCH_POSTS_REQUEST:
       return {
         ...state,
         loading: true,
       };
-    case FETCH_USERS_SUCCESS:
+    case FETCH_POSTS_SUCCESS:
       return {
         ...state,
         loading: false,
-        users: action.payload,
+        posts: action.payload,
       };
-    case FETCH_USERS_FAILURE:
+    case FETCH_POSTS_FAILURE:
       return {
         ...state,
         loading: false,
@@ -62,23 +62,23 @@ const userReducer = (state = initialState, action) => {
       return initialState;
   }
 };
-const fetchUsers = () => {
+const fetchPosts = () => {
   return function (dispatch) {
-    dispatch(fetchUserRequest());
+    dispatch(fetchPostRequest());
 
     axios
-      .get('https://jsonplaceholder.typicode.com/users')
+      .get('http://localhost:8080/post/type/trending')
       .then(response => {
-        const users = response.data.map(user => user);
-        dispatch(fetchUserSuccess(users));
+        const posts = response.data.map(post => post);
+        dispatch(fetchPostSuccess(posts));
       })
       .catch(error => {
-        dispatch(fetchUserFailure(error.message));
+        dispatch(fetchPostFailure(error.message));
       });
   };
 };
-const store = createStore(userReducer, applyMiddleware(thunkMiddleware));
+const store = createStore(postReducer, applyMiddleware(thunkMiddleware));
 store.subscribe(() => {
   console.log(store.getState());
 });
-store.dispatch(fetchUsers());
+store.dispatch(fetchPosts());
