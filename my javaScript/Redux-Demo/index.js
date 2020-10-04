@@ -61,7 +61,11 @@ const rootReducer = combineReducers({
   cake: CakeReducer,
   IceCream: IceCreamReducer,
 });
-const store = createStore(rootReducer, applyMiddelware(logger));
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  applyMiddelware(logger)
+);
 console.log('Initial state', store.getState());
 const unsubscribe = store.subscribe(() => {});
 
@@ -74,4 +78,3 @@ store.dispatch(buyIceCream());
 store.dispatch(buyIceCream());
 store.dispatch(buyIceCream());
 unsubscribe();
-

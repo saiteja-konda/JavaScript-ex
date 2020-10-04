@@ -5,7 +5,7 @@ const thunkMiddleware = require('redux-thunk').default;
 const reduxLogger = require('redux-logger');
 const axios = require('axios');
 const logger = reduxLogger.createLogger();
-const url = 'http://localhost:8080/post';
+const url = 'http://localhost:8082/post';
 
 //State
 const initialState = {
@@ -147,10 +147,8 @@ const postReducer = (state = initialState, action) => {
       };
     case DELETE_POST_SUCCESS:
       return {
-         ...state,
-        posts:  state.posts.filter(
-            post => post.id !== action.payload
-            ),
+        ...state,
+        posts: state.posts.filter(post => post.id !== action.payload),
         loading: false,
       };
     case DELETE_POST_FAILURE:
@@ -197,7 +195,7 @@ const deletePost = id => {
   return function (dispatch) {
     dispatch(deletePostRequest());
     axios
-      .delete(`http://localhost:8080/post/${id}`)
+      .delete(`http://localhost:8082/post/${id}`)
       .then(res => {
         // console.log(res.response)
         dispatch(deletePostSuccess(id));
@@ -207,7 +205,11 @@ const deletePost = id => {
       });
   };
 };
-const store = createStore(postReducer, applyMiddleware(thunkMiddleware, logger));
+const store = createStore(
+  postReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  applyMiddleware(thunkMiddleware, logger)
+);
 store.subscribe(() => {});
 
 const newPost = {
@@ -218,5 +220,5 @@ const newPost = {
   categoryId: '1',
 };
 store.dispatch(fetchPosts());
-store.dispatch(addPost(newPost));
-store.dispatch(deletePost(60));
+// store.dispatch(addPost(newPost));
+// store.dispatch(deletePost(60));
